@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+
+<head>
+  <title> GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link href="style_extra.css" rel="stylesheet">
+</head>
+
+<body class="nd-docs">
+  <div class="nd-pageheader">
+    <div class="container">
+      <p class="lead" style="font-size:300%;">
+        GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning
+        <address>
+                    <nobr>
+            <a href="https://hanruiwang.me">Hanrui Wang</a>
+            <sup>1</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="https://github.com/kuan-wang">Kuan Wang</a>
+            <sup>1</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="https://konno.moe/cv/">Jiacheng Yang</a>
+            <sup>1</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="https://scholar.google.com/citations?user=UnQWfpoAAAAJ&hl=en">Linxiao Shen</a>
+            <sup>2</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="https://www.cerc.utexas.edu/~nansun/">Nan Sun</a>
+            <sup>2</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="http://www-mtl.mit.edu/wpmu/hslee/">Hae-Seung Lee</a>
+            <sup>2</sup>
+            ,
+          </nobr>
+                    <nobr>
+            <a href="https://songhan.mit.edu">Song Han</a>
+            <sup>1</sup>
+            
+          </nobr>
+                    <br>
+                    <nobr><sup>1</sup>Massachusetts Institute of Technology,</nobr>
+                    <nobr><sup>2</sup>University of Texas at Austin</nobr>
+                  </address>
+      </p>
+    </div>
+  </div> <!-- end nd-pageheader -->
+
+  <div class="container">
+
+    <div class="row">
+      <div class="col text-center">
+        <p>
+                    <a href="https://arxiv.org/abs/2005.00406" class="d-inline-block p-3 align-top">
+            <img height="100" width="78" src="assets/paper_thumbnail.png" style="border:1px solid"
+              data-nothumb><br>
+            DAC 2020 Paper
+          </a>
+                </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+
+                
+                <p><p>Automatic transistor sizing is a challenging problem in circuit design due to the large design space, complex performance trade-offs, and fast technological advancements. Although there has been plenty of work on transistor sizing targeting on one circuit, limited research has been done on transferring the knowledge from one circuit to another to reduce the re-design overhead. In this paper, we present GCN-RL Circuit Designer, leveraging reinforcement learning (RL) to transfer the knowledge between different technology nodes and topologies. Moreover, inspired by the simple fact that circuit is a graph, we learn on the circuit topology representation with graph convolutional neural networks (GCN). The GCN-RL agent extracts features of the topology graph whose vertices are transistors, edges are wires. Our learning-based optimization consistently achieves the highest Figures of Merit (FoM) on four different circuits compared with conventional black-box optimization methods (Bayesian Optimization, Evolutionary Algorithms), random search, and human expert designs. Experiments on transfer learning between five technology nodes and two circuit topologies demonstrate that RL with transfer learning can achieve much higher FoMs than methods without knowledge transfer. Our transferable optimization method makes transistor sizing and design porting more effective and efficient.</p></p>
+        
+                        
+                <p><p align="center">
+    <img src="assets/overview.jpg" width="80%">
+</p></p>
+        
+                                <h2>Graph Neural Networks as RL Agent</h2>
+        
+                <p><p align="center">
+    <img src="assets/gcn.jpg" width="40%">
+</p></p>
+        
+                                <h2>FoM Comparisons on Four Circuits</h2>
+        
+                <p><p align="center">
+    <img src="assets/comparison.jpg" width="80%">
+</p></p>
+        
+                                <h2>Knowledge Transfer between Technology Nodes</h2>
+        
+                <p><p align="center">
+    <img src="assets/transfer.jpg" width="80%">
+</p></p>
+        
+                                <h2>Citation</h2>
+        
+        
+                <pre class="highlight"> @inproceedings{wang2020gcnrl,
+    title     = {GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning},
+    author    = {Wang, Hanrui and Wang, Kuan and Yang, Jiacheng and Shen, Linxiao and Sun, Nan and Lee, Hae-Seung and Han, Song},
+    booktitle = {The 57th Design Automation Conference (DAC)},
+    year      = {2020}
+} </pre>
+                        
+                <p><p><strong>Acknowledgments</strong>: We sincerely thank NSF Career Award #1943349, MIT Center for Integrated Circuits and Systems, Samsung, MediaTek for supporting this research. We also thank Dr. John Cohn for valuable discussion.</p></p>
+        
+                
+      </div>
+    </div> <!-- row -->
+
+  </div> <!-- container -->
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight * 50 + "px";
+        }
+        content.style.height = "550%";
+      });
+    }
+  </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true
+      }
+    });
+  </script>
+  
+  <script type="text/javascript"
+      src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
+</body>
+
+</html>
