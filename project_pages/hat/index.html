@@ -67,10 +67,15 @@
     <div class="row">
       <div class="col text-center">
         <p>
-                    <a href="assets/HanruiWang_ACL2020_Hardware-aware-transformers.pdf" class="d-inline-block p-3 align-top">
+                    <a href="https://arxiv.org/abs/2005.14187" class="d-inline-block p-3 align-top">
             <img height="100" width="70" src="assets/paper_thumbnail.png" style="border:1px solid"
               data-nothumb><br>
             ACL 2020 Paper
+          </a>
+                    <a href="https://github.com/mit-han-lab/hardware-aware-transformers.git" class="d-inline-block p-3 align-top">
+            <img height="100" width="100" src="assets/code.png" style="border:1px solid"
+              data-nothumb><br>
+            Code
           </a>
                 </div>
     </div>
@@ -79,23 +84,29 @@
       <div class="col">
 
                 
-                <p><p>Transformers are ubiquitous in Natural Language Processing (NLP) tasks, but they are difficult to be deployed on hardware due to the intensive computation. To enable low-latency inference on resource-constrained hardware platforms, we propose to design Hardware-Aware Transformers (HAT) with neural architecture search. We first construct a large design space with arbitrary encoder-decoder attention and heterogeneous layers. Then we train a SuperTransformer that covers all candidates in the design space, and efficiently produces many SubTransformers with weight sharing. Finally, we perform an evolutionary search with a hardware latency constraint to find a specialized SubTransformer dedicated to run fast on the target hardware. Extensive experiments on four machine translation tasks demonstrate that HAT can discover efficient models for different hardware (CPU, GPU, IoT device). When running WMT’14 translation task on Raspberry Pi-4, HAT can achieve 3× speedup, 3.7× smaller size over baseline Transformer; 2.7× speedup, 3.6× smaller size over Evolved Transformer with 12,041× less search cost and no performance loss.</p></p>
+                <p><p>Transformers are ubiquitous in Natural Language Processing (NLP) tasks, but they are difficult to be deployed on hardware due to the intensive computation. To enable low-latency inference on resource-constrained hardware platforms, we propose to design Hardware-Aware Transformers (HAT) with neural architecture search. We first construct a large design space with arbitrary encoder-decoder attention and heterogeneous layers. Then we train a SuperTransformer that covers all candidates in the design space, and efficiently produces many SubTransformers with weight sharing. Finally, we perform an evolutionary search with a hardware latency constraint to find a specialized SubTransformer dedicated to run fast on the target hardware. Extensive experiments on four machine translation tasks demonstrate that HAT can discover efficient models for different hardware (CPU, GPU, IoT device). When running WMT'14 translation task on Raspberry Pi-4, HAT can achieve 3x speedup, 3.7x smaller size over baseline Transformer; 2.7x speedup, 3.6x smaller size over Evolved Transformer with 12,041x less search cost and no performance loss.</p></p>
         
                         
+                <p><p align="center">
+    <img src="assets/teaser.jpg" width="80%">
+</p></p>
+        
+                                <h2>HAT framework overview</h2>
+        
                 <p><p align="center">
     <img src="assets/overview.jpg" width="80%">
 </p></p>
         
-                                <h2>Results on WMT 14' En-De and En-Fr translation tasks</h2>
+                                <h2>Results on four translation tasks on three different hardware</h2>
         
                 <p><p align="center">
-    <img src="assets/results.jpg" width="80%">
+    <img src="assets/results.jpg" width="100%">
 </p></p>
         
                                 <h2>Citation</h2>
         
         
-                <pre class="highlight"> @inproceedings{wang2020hat,
+                <pre class="highlight"> @inproceedings{hanruiwang2020hat,
     title     = {HAT: Hardware-Aware Transformers for Efficient Natural Language Processing},
     author    = {Wang, Hanrui and Wu, Zhanghao and Liu, Zhijian and Cai, Han and Zhu, Ligeng and Gan, Chuang and Han, Song},
     booktitle = {Annual Conference of the Association for Computational Linguistics},
