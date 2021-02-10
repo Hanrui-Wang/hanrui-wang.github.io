@@ -60,6 +60,10 @@ body {
   width: 100%;
 }
 
+.hidden {
+  display:none;
+}
+
 .sticky + .content {
   padding-top: 102px;
 }
@@ -138,6 +142,12 @@ function myFunction() {
               <heading>News</heading>
               <ul>
                 <li>
+                  Feb. 2021. <a href="http://spatten.mit.edu/">SpAtten
+                </a> project is selected as
+                  <a href="http://mit.edu/archive/spotlight/streamlining-sentence-analysis/"> MIT homepage spotlight</a>.
+                </li>
+
+                <li>
                   Jan. 2021. Got awarded <a href="http://scholarship.baidu.com/">Baidu Scholarship</a>.
                 </li>
 
@@ -149,57 +159,70 @@ function myFunction() {
                   Nov. 2020. Got awarded <a href="https://blogs.nvidia.com/blog/2020/12/04/graduate-fellowships-gpu-computing-research/">Nvidia Graduate Fellowship Finalist</a>.
                 </li>
 
-                <li>
-                  Oct. 2020. "SpAtten: Efficient Sparse Attention
-                  Architecture with Cascade Token and Head Pruning" accepted
-                  to HPCA 2021.
-                </li>
+                <button onclick="myFunction1()">More News</button>
 
-                <li>
-                  Aug. 2020. Finished a great summer internship @Nvidia Research. Thank you my incredible mentors!
-                </li>
+                <script>
+                  function myFunction1() {
+                    var x = document.getElementById("myDIV");
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    } else {
+                      x.style.display = "block";
+                    }
+                  }
+                </script>
 
-                <li>
-                  Jul. 2020. Received DAC Young Fellowship and Best Research Video Award.
-                </li>
+                <div id="myDIV" class="hidden">
+                  <li>
+                    Oct. 2020. "SpAtten: Efficient Sparse Attention
+                    Architecture with Cascade Token and Head Pruning" accepted
+                    to HPCA 2021.
+                  </li>
+                  <li>
+                    Aug. 2020. Finished a great summer internship @Nvidia Research. Thank you my incredible mentors!
+                  </li>
 
-                <li>
-                  Jun. 2020. One co-authored paper accepted to ECCV 2020.
-                </li>
+                  <li>
+                    Jul. 2020. Received DAC Young Fellowship and Best Research Video Award.
+                  </li>
 
-                <li>
-                  May. 2020. HAT is <a href="https://github.com/mit-han-lab/hardware-aware-transformers">open-sourced</a>!.
-                </li>
+                  <li>
+                    Jun. 2020. One co-authored paper accepted to ECCV 2020.
+                  </li>
 
-                <li>
-                  Apr. 2020. "MicroNet for Efficient Language Modeling" accepted to Journal of Machine Learning Research 2020.
-                </li>
+                  <li>
+                    May. 2020. HAT is <a href="https://github.com/mit-han-lab/hardware-aware-transformers">open-sourced</a>!.
+                  </li>
 
-                <li>
-                  Apr. 2020. "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing" accepted to ACL 2020.
-                </li>
-                <li>
-                  Mar. 2020. "APQ: Joint Search for Network Architecture, Pruning and Quantization Policy" accepted to CVPR 2020.
-                </li>
-                <li>
-                  Feb. 2020. I gave a talk at Qualcomm Research Center on "GCN-RL Circuit Designer: Transferable Transistor Sizing With Graph Neural Networks and Reinforcement Learning".
-                </li>
-                <li>
-                  Feb. 2020. I gave a talk in HPCA 2020 on "SpArch: Efficient Architecture for Sparse Matrix Multiplication".
-                </li>
-                <li>
-                  Feb. 2020. "GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning" accepted to DAC 2020.
-                </li>
-                <li>
-                  Dec. 2020. I gave a talk on Efficient Langauge Modeling at NeurIPS 2019 MicroNet Challenge.
-                </li>
-                <li>
-                  Nov. 2019. "SpArch: Efficient Architecture for Sparse Matrix Multiplication" accepted to HPCA 2020.
-                </li>
-                <li>
-                  Nov. 2019. I won the NeurIPS 2019 MicroNet Challenge, code <a href="https://github.com/mit-han-lab/neurips-micronet">open-sourced</a>.
-                </li>
+                  <li>
+                    Apr. 2020. "MicroNet for Efficient Language Modeling" accepted to Journal of Machine Learning Research 2020.
+                  </li>
 
+                  <li>
+                    Apr. 2020. "HAT: Hardware-Aware Transformers for Efficient Natural Language Processing" accepted to ACL 2020.
+                  </li>
+                  <li>
+                    Mar. 2020. "APQ: Joint Search for Network Architecture, Pruning and Quantization Policy" accepted to CVPR 2020.
+                  </li>
+                  <li>
+                    Feb. 2020. I gave a talk at Qualcomm Research Center on "GCN-RL Circuit Designer: Transferable Transistor Sizing With Graph Neural Networks and Reinforcement Learning".
+                  </li>
+                  <li>
+                    Feb. 2020. I gave a talk in HPCA 2020 on "SpArch: Efficient Architecture for Sparse Matrix Multiplication".
+                  </li>
+                  <li>
+                    Feb. 2020. "GCN-RL Circuit Designer: Transferable Transistor Sizing with Graph Neural Networks and Reinforcement Learning" accepted to DAC 2020.
+                  </li>
+                  <li>
+                    Dec. 2020. I gave a talk on Efficient Langauge Modeling at NeurIPS 2019 MicroNet Challenge.
+                  </li>
+                  <li>
+                    Nov. 2019. "SpArch: Efficient Architecture for Sparse Matrix Multiplication" accepted to HPCA 2020.
+                  </li>
+                  <li>
+                    Nov. 2019. I won the NeurIPS 2019 MicroNet Challenge, code <a href="https://github.com/mit-han-lab/neurips-micronet">open-sourced</a>.
+                  </li>
+                </div>
               </ul>
             </td>
             </tr>
@@ -220,7 +243,10 @@ function myFunction() {
           <br>
             <em>International Symposium on High-Performance Computer Architecture (HPCA)</em>, 2021.
           <br>
-          <a href="https://arxiv.org/abs/2012.09852">Paper</a>
+          <a href="https://arxiv.org/abs/2012.09852">Paper</a> &nbsp;/&nbsp;
+          <a href="https://hanlab.mit.edu/projects/spatten/assets/spatten/spatten_slides.pdf">Slides</a> &nbsp;/&nbsp;
+          <a href="https://hanlab.mit.edu/projects/spatten/assets/spatten/spatten_video_v1.mp4">Video</a> &nbsp;/&nbsp;
+          <a href="https://spatten.mit.edu">Project Page</a>
           <br>
           <br>
 
